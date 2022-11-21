@@ -1,0 +1,30 @@
+<!--- templates/base.html --->
+{%load static %}
+<html>
+    <head>
+        <title>Django blog</title>
+        <link href="https:// fonts.googleapis.com/css?family=\
+        Source|Sans| Pro:"400" rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body background="https://fotografias-neox.atresmedia.com/clipping/cmsimages01/2022/05/23/563C979A-D2BE-458F-B930-4C1F493FA44C/spy-family_97.jpg?crop=1920,1080,x0,y0&width=1600&height=900&optimize=high&format=webply">
+    <div>
+        <header>
+            <div class="nav−left">
+                <center><h1><a style="background:BlanchedAlmond " href="{% url 'home' %}">inicio del blog "sobre lo mejor de los animes"  </a></h1></center>
+            <h1><a style="background:BlanchedAlmond ">fraces inspiradoras de algunos animes:<br>
+            -Incluso el más fuerte de los oponentes siempre tiene una debilidad. (Itachi Uchiha)</br>
+            -No vivas con falsedades ni miedos, porque terminarás odiándote a ti mismo. (Uzumaki Naruto)</br>
+            -Lo importante no es lo que los demás piensen de ti, sino cómo te sientes por ellos. (Meliodas))</br></a></h1>
+            </div>
+        <div class="nav-right">
+        
+            <b><a href="{% url 'post_new' %}"><p><font size=4>| Nuevo post</a></p></b>
+            <center><h1><a>¿Qué anime nos recomiendas? y ¿por qué?</a></h1>
+        </div>
+        </header>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    </body>
+</html>
